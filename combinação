@@ -1,0 +1,34 @@
+#Combinação de vogais e consoantes
+#Autor: Ícaro Chiabai
+#Ideia original de: Creudo Rodrigues
+#------------------------------------------#
+def comb():
+
+    vogais = ['a', 'e', 'i', 'o', 'u'] #Lista de vogais
+    consoantes = ['b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'] #Lista de consoantes
+
+    i = 0 #utilizado para identação das vogais
+    j = 0 #utilizado para identação das consoantes
+    comb = [] #lista resultado das combinações
+
+
+    while i < len(vogais): #loop para fazer o seguinte para todas as letras na lista das vogais
+        while j < len(consoantes): #loop para fazer o seguinte para todas as letras na lista das consoantes
+            y = consoantes[j] + vogais[i] #silaba resultante da combinação
+            comb.append(y) #adicionar a silaba resultante à lista das combinações
+            j = j +1 #aumentar o valor de j para que seja feita com a proxima letra até que chegue no limite
+        i = i + 1 #quando chegar no limite, passa para a proxima vogal e repete todo o processo
+        j = 0 #é claro, resentando o valor de j pra 0
+
+    comb.append('gua') #adições que são mais fáceis de fazer sem ter que fazer um código
+    comb.append('gue')
+    comb.append('gui')
+    comb.append('guo')
+    comb.append('qua')
+    comb.append('que')
+    comb.append('qui')
+    comb.append('quo')
+
+    print(comb) #printar a lista resultante das combinações
+
+comb() #inicializar a função comb() acima
